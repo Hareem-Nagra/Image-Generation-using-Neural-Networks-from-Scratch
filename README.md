@@ -1,33 +1,5 @@
 # Image Generation using MNIST Dataset
 
-This project involves training a neural network model from scratch on the MNIST dataset to generate fake handwritten images of digits from 0-9.
+This project involves training a neural network from scratch to generate fake handwritten images of digits (0-9) using the MNIST dataset. The MNIST dataset consists of 60,000 training images and 10,000 testing images of handwritten digits. The data preprocessing steps include normalizing and flattening the images, and converting digit labels into one-hot encoded vectors.
 
-## Table of Contents
-1. [Installation](#installation)
-2. [Dataset](#dataset)
-3. [Data Preprocessing](#data-preprocessing)
-4. [Model Architecture](#model-architecture)
-5. [Training the Model](#training-the-model)
-6. [Generating Images](#generating-images)
-7. [Results](#results)
-8. [Contributing](#contributing)
-9. [License](#license)
-
-## Installation
-
-To run this project, you'll need to have Python installed along with the following libraries:
-
-```bash
-pip install numpy matplotlib tensorflow
-
-## Dataset
-We use the MNIST dataset, which consists of 60,000 training images and 10,000 testing images of handwritten digits from 0 to 9.
-```bash
-from keras.datasets import mnist
-
-(train_images, train_labels), (test_images, test_labels) = mnist.load_data()
-print(train_images.shape)  # (60000, 28, 28)
-print(train_labels.shape)  # (60000,)
-print(test_images.shape)   # (10000, 28, 28)
-print(test_labels.shape)   # (10000,)
-
+The neural network comprises an input layer, a hidden layer with ReLU activation and dropout for regularization, and an output layer with sigmoid activation. The model is trained using the Adam optimizer over 10,000 epochs with a learning rate of 0.001. Once trained, the model can generate images of digits based on user input, showcasing its ability to create realistic handwritten digit images. The results and generated images demonstrate the effectiveness of the model in learning and replicating the patterns of handwritten digits.
