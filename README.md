@@ -19,3 +19,15 @@ To run this project, you'll need to have Python installed along with the followi
 
 ```bash
 pip install numpy matplotlib tensorflow
+
+## Dataset
+We use the MNIST dataset, which consists of 60,000 training images and 10,000 testing images of handwritten digits from 0 to 9.
+```bash
+from keras.datasets import mnist
+
+(train_images, train_labels), (test_images, test_labels) = mnist.load_data()
+print(train_images.shape)  # (60000, 28, 28)
+print(train_labels.shape)  # (60000,)
+print(test_images.shape)   # (10000, 28, 28)
+print(test_labels.shape)   # (10000,)
+
